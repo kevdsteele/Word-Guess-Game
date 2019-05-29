@@ -1,0 +1,26 @@
+body {
+background-color: steelblue;
+font-family: 'Luckiest Guy', cursive;
+color:white;
+
+}
+
+.row-ht-l {
+height:75px;
+
+}
+
+.back-img{
+height:100px;
+width:200px;
+}
+
+
+#wordText  {
+
+font-size:42px;
+}
+
+#guessText,#guessAlert, #guessesLeft,#winsText,#wordCat,#wordHint, .left-text, .right-text {
+font-size:32px;
+}

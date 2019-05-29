@@ -2,53 +2,78 @@
 <html lang="en-us">
 <head>
     <meta charset="utf-8">
-    <title>Word Guess Game</title>
+    <title>Word Play</title>
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 <body>
-
-        <div class="jumbotron jumbotron-fluid mt-0 pt-0">
-                <div class="container">
-                 <div class="row center-block"> 
-                <img src="assets/images/1990s_banner.png">
-                  </div> 
+ <div class="jumbotron jumbotron-fluid pt-0 pb-1 bg-secondary">
+    <div class="container">
+            <div class ="row mb-3">
+                    <div class = "col-md-4 center-block text-center">
+                    <img src="assets/images/1990s_banner.png">
+                    </div>
+                    <div class = "col-md-4 center-block text-center">
+                    <img src="assets/images/1990s_banner.png">
+                    </div>
+                    <div class = "col-md-4 center-block text-center">
+                    <img src="assets/images/1990s_banner.png">
+                    </div>
                 </div>
-              </div>
+                <div class ="row pt-2 pb-2">
+                        <div class = "col-md-12 center-block text-center">
+                                <h2> Guess the 90s Related Movie, TV Show or Song </h2>
+                        </div>
+                    </div>                  
+    </div>
+</div>    
+
 <div class="container">
+    <div class ="row">
+        <div class="col-md-4">
+            <div class="row row-ht-l mb-2">
+                    <span class="left-text">Guessed Letters<span></span>
+            </div>
+            <div class="row row-ht-l mb-2">
+                    <span id="guessText"></span>
+            </div>
+            <div class="row row-ht-l mb-2">
+                <span id="guessesLeft"></span>
+            </div>
+            <div class="row row-ht-l mb-2">
+                <span id="winsText"></span>
+            </div>
+        </div>
 
+        <div class="col-md-8 center-block">
+                <div class ="row mb-2 pb-2">
+                    <div class="col-md-12 center-block text-center" id="guessAlert">
+                        <h2>Press any key to start</h2>
+                    </div>
+                </div>  
+                <div class="row">
+                    <div class="col-md-12 center-block text-center">
+                        <span class="right-text">Category: </span>
+                        <span id="wordCat"></span>
+                    </div>
+                </div>  
+                    <div class ="row pt-4">
+                        <div class="col-md-12 center-block text-center" id="wordText">
 
-    <div class="row center">
-        <div class = "col-md-12 align-center">
-                <div class="row justify-content-md-center"> <h2> Guess the Word</h2>
-                <hr>
-                </div>
-                <div class="row guessAlert">Press Any Key to Start</div>
+                        </div>
+                    </div>
+                    <div class="row pt-4">
+                        <div class="col-md-12 center-block text-center" id="wordHint">
+
+                        </div>
+                    </div>
         </div>
     </div>
+
     
-    <div class="row">
-        <div class ="col-md-4">
-           <div class="row">Your Guess</div>
-            <div class="row wordText"></div>
-            <div class="row">Guessed Letters</div>
-            <div class="row guessText"></div>
-            <div class="row">Guesses Left</div>
-            <div class="row guessesLeft"></div>
-            <div class="row">You have won</div>
-            <div class="row winsText"></div>
-
-        </div>
-
-
-        <div class="col-md-8">
-           
-
-        </div>
-    </div>
-    
-  
-</div>
+</div> 
 
 
 <script type ="text/javascript" src="assets/javascript/game.js"></script>
