@@ -19,7 +19,6 @@ var wordLetters = [];
 var userSolution = [];
 var guessCount = 10;
 var guessedLetters = [];
-var capsOn = null;
 var correctGuess = false;
 
 
@@ -38,11 +37,14 @@ document.getElementById("wordHint").innerHTML="";
 
 /* call random word function */
 var word =randWord();
+
+/*key used to pair to category and hint arrays */
 var key = wordList.indexOf(word);
 
+/*show word categorty */
 document.getElementById("wordCat").innerHTML=categories[key].toUpperCase();
 
-console.log(categories[key]);    
+   
 /*Function to pull partial correct guess from array into a string. Output from the array included the comma seperator */    
 function updateWord (userSolution) {
     var wordString = "";
@@ -84,11 +86,7 @@ document.onkeyup = function(event) {
     console.log(event.key);
     if (allowedKeys.indexOf(event.key) === -1) {
         document.getElementById("guessAlert").innerHTML="Only letters allowed. Please try again";
-    } else if (event.getModifierState("CapsLock"))  {
-        document.getElementById("guessAlert").innerHTML="Caps lock off. Please try again";
-    }
-
-    else {
+    } else {
     var userGuess = event.key;
     var solved = false;
     var wordString=updateWord(userSolution);
@@ -130,7 +128,7 @@ if (guessedLetters.indexOf(userGuess) === -1){
             console.log(userSolution);
             console.log(wordString);
             document.getElementById("guessAlert").innerHTML="You won! Restarting game...";
-            
+            /*play winning sound*/
             audioElement.setAttribute("src", "http://toponehitwonders.com/audio/1993/tag-team-Whoomp-There-It-Is).mp3");
             audioElement.play();
             wins++;
@@ -146,12 +144,14 @@ if (guessedLetters.indexOf(userGuess) === -1){
         document.getElementById("guessAlert").innerHTML="Incorrect guess. Please try again!";
         console.log("Incorrect guess");
         console.log(userSolution);
+        /* display hint text if less than 5 guesses left */
         if (guessCount<5) {
             document.getElementById("wordHint").innerHTML="Hint: " + hints[key].toUpperCase();
         }
     }
     if (guessCount === 0) {
         document.getElementById("guessAlert").innerHTML="You lose!! Restarting game...";
+        /*play losing sound*/
         audioElement.setAttribute("src", "http://www.wavsource.com/snds_2018-06-03_5106726768923853/tv/misc/weakest_link.wav");
             audioElement.play();
         

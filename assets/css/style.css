@@ -1,5 +1,5 @@
 body {
-background-color: steelblue;
+background-color: #0892cf;
 font-family: 'Luckiest Guy', cursive;
 color:white;
 
@@ -10,9 +10,8 @@ height:75px;
 
 }
 
-.back-img{
-height:100px;
-width:200px;
+.jumbo {
+background-color: #221c64;
 }
 
 
